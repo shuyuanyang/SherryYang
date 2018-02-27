@@ -98,7 +98,7 @@ $(function() {
     }
     else {
       $.ajax({
-        url:'contact_form.php',
+        url:'./contact_form.php',
         data:$(this).serialize(),
         type:'POST',
         success:function(data){
@@ -108,6 +108,7 @@ $(function() {
           });
         },
         error:function(data){
+          console.log('data', data)
           $("#error").show().fadeIn(1000); //===Show Error Message====
         }
       });
